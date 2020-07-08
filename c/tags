@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CFLAGS	Makefile	/^CFLAGS=-std=c11 -g -static$/;"	m
+ND_ADD	9cc.c	/^  ND_ADD, \/\/ +$/;"	e	enum:__anon2	file:
+ND_DIV	9cc.c	/^  ND_DIV, \/\/ \/$/;"	e	enum:__anon2	file:
+ND_MUL	9cc.c	/^  ND_MUL, \/\/ *$/;"	e	enum:__anon2	file:
+ND_NUM	9cc.c	/^  ND_NUM, \/\/ integer$/;"	e	enum:__anon2	file:
+ND_SUB	9cc.c	/^  ND_SUB, \/\/ -$/;"	e	enum:__anon2	file:
+Node	9cc.c	/^struct Node {$/;"	s	file:
+NodeKind	9cc.c	/^} NodeKind;$/;"	t	typeref:enum:__anon2	file:
+TK_EOF	9cc.c	/^  TK_EOF,       \/\/ end of input$/;"	e	enum:__anon1	file:
+TK_NUM	9cc.c	/^  TK_NUM,       \/\/ integer$/;"	e	enum:__anon1	file:
+TK_RESERVED	9cc.c	/^  TK_RESERVED,  \/\/ symbol$/;"	e	enum:__anon1	file:
+Token	9cc.c	/^struct Token {$/;"	s	file:
+Token	9cc.c	/^typedef struct Token Token;$/;"	t	typeref:struct:Token	file:
+TokenKind	9cc.c	/^} TokenKind;$/;"	t	typeref:enum:__anon1	file:
+assert	test.sh	/^assert() {$/;"	f
+at_eof	9cc.c	/^bool at_eof() {$/;"	f
+consume	9cc.c	/^bool consume(char op) {$/;"	f
+error	9cc.c	/^void error(char *fmt, ...) {$/;"	f
+error_at	9cc.c	/^void error_at(char *loc, char *fmt, ...) {$/;"	f
+expect	9cc.c	/^void expect(char op) {$/;"	f
+expect_number	9cc.c	/^int expect_number() {$/;"	f
+expr	9cc.c	/^Node *expr() {$/;"	f
+kind	9cc.c	/^  NodeKind kind; \/\/ hode kind$/;"	m	struct:Node	file:
+kind	9cc.c	/^  TokenKind kind; \/\/ kind of token$/;"	m	struct:Token	file:
+lhs	9cc.c	/^  Node *lhs;     \/\/ left hand side$/;"	m	struct:Node	file:
+main	9cc.c	/^int main(int argc, char **argv) {$/;"	f
+main	tmp.s	/^main:$/;"	l
+mul	9cc.c	/^Node *mul() {$/;"	f
+new_node	9cc.c	/^Node *new_node(NodeKind kind, Node *lhs, Node *rhs) {$/;"	f
+new_node_num	9cc.c	/^Node *new_node_num(int val) {$/;"	f
+new_token	9cc.c	/^Token *new_token(TokenKind kind, Token *cur, char *str) {$/;"	f
+next	9cc.c	/^  Token *next;    \/\/ next input token$/;"	m	struct:Token	file:
+primary	9cc.c	/^Node *primary() {$/;"	f
+rhs	9cc.c	/^  Node *rhs;     \/\/ right hand side$/;"	m	struct:Node	file:
+str	9cc.c	/^  char *str;      \/\/ string of token$/;"	m	struct:Token	file:
+token	9cc.c	/^Token *token;$/;"	v
+tokenize	9cc.c	/^Token *tokenize() {$/;"	f
+user_input	9cc.c	/^char *user_input;$/;"	v
+val	9cc.c	/^  int val;        \/\/ value if 'kind' == TK_NUM$/;"	m	struct:Token	file:
+val	9cc.c	/^  int val;       \/\/ used only case of kind == ND_NUM$/;"	m	struct:Node	file:

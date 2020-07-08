@@ -1,0 +1,12 @@
+*~
+*.o
+tmp*
+a.out
+9cc
+*icloud
+.DS_Store
+*swp
+debug/
+target/
+Cargo.lock
+**/*.rs/bk
