@@ -7,3 +7,6 @@ a.out
 .DS_Store
 *swp
 .idea/
+debug/
+target/
+Cargo.lock

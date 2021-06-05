@@ -30,7 +30,7 @@ Token *token;
 char *user_input;
 
 // Error report function
-// Takes the same argument as printf
+// Take the same argument as printf
 void error(char *fmt, ...) {
   va_list ap;
   va_start(ap, fmt);
@@ -39,7 +39,7 @@ void error(char *fmt, ...) {
   exit(1);
 }
 
-// Reports an error location and exit
+// Report an error location and exit
 void error_at(char *loc, char *fmt, ...) {
   va_list ap;
   va_start(ap, fmt);
@@ -53,8 +53,8 @@ void error_at(char *loc, char *fmt, ...) {
   exit(1);
 }
 
-// Returns true if the next token is the expected symbol
-// Returns false otherwise
+// Return true if the next token is the expected symbol
+// Return false otherwise
 bool consume(char op) {
   if (token->kind != TK_RESERVED || token->str[0] != op)
     return false;
@@ -62,7 +62,7 @@ bool consume(char op) {
   return true;
 }
 
-// Moves on to the next token if the next token is the expected symbol
+// Move on to the next token if the next token is the expected symbol
 // Reports error otherwise
 void expect(char op) {
   if (token->kind != TK_RESERVED || token->str[0] != op)
@@ -71,8 +71,8 @@ void expect(char op) {
 }
 
 // If the next token is the expected symbol,
-// moves on to the next token and return the value 
-// Reports error otherwise
+// move on to the next token and return the value 
+// Report error otherwise
 int expect_number() {
   if (token->kind != TK_NUM)
     error_at(token->str, "expected a number");
@@ -85,7 +85,7 @@ bool at_eof() {
   return token->kind == TK_EOF;
 }
 
-// Generates a new token and connect to 'cur'
+// Generate a new token and connect to 'cur'
 Token *new_token(TokenKind kind, Token *cur, char *str) {
   Token *tok = calloc(1, sizeof(Token));
   tok->kind = kind;
@@ -94,7 +94,7 @@ Token *new_token(TokenKind kind, Token *cur, char *str) {
   return tok;
 }
 
-// Returns tokenized input string 'p'
+// Return tokenized input string 'p'
 Token *tokenize() {
   char *p = user_input;
   Token head;
@@ -248,15 +248,15 @@ int main(int argc, char **argv) {
   token = tokenize();
   Node *node = expr();
 
-  // Outputs the first half of assembly code
+  // Output the first half of assembly code
   printf(".intel_syntax noprefix\n");
   printf(".globl main\n");
   printf("main:\n");
 
-  // Generates code travel the AST down
+  // Generate code traveling the AST down
   gen(node);
 
-  // Loads the result on the top of the stack into RAX
+  // Load the result on the top of the stack into RAX
   printf("  pop rax\n");
   printf("  ret\n");
   return 0;

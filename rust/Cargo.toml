@@ -1,5 +1,5 @@
 [package]
-name = "rust"
+name = "rust-9cc"
 version = "0.1.0"
 authors = ["'coffee-addict' <'ksk.sgt+github@gmail.com'>"]
 edition = "2018"
